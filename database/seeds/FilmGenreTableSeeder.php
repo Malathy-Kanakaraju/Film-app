@@ -12,21 +12,48 @@ class FilmGenreTableSeeder extends Seeder
      */
     public function run()
     {
-        $film = array(
+        $film_genre = array(
             array(
-                'name' => 'Tangled',
-                'description' => 'Rapunzel, an innocent, young girl, is locked up by her overly protective mother. Her wish to escape into the world outside finally comes true when she meets the good-hearted thief, Flynn.',
-                'release_date' => '01-21-2011',
-                'rating' => '3',
-                'ticket_price' => '20.0',
-                'country' => 'United States of America',
-                'photo' => 'test',
+                'film_id' => 1,
+                'genre_id' => 5,
+                'created_by' => '1',
+                'created_at' => Carbon::now(),
+                'updated_by' => 1,
+                'updated_at' => Carbon::now()
+            ),
+            array(
+                'film_id' => 1,
+                'genre_id' => 4,
+                'created_by' => '1',
+                'created_at' => Carbon::now(),
+                'updated_by' => 1,
+                'updated_at' => Carbon::now()
+            ),
+            array(
+                'film_id' => 2,
+                'genre_id' => 3,
+                'created_by' => '1',
+                'created_at' => Carbon::now(),
+                'updated_by' => 1,
+                'updated_at' => Carbon::now()
+            ),
+            array(
+                'film_id' => 3,
+                'genre_id' => 3,
+                'created_by' => '1',
+                'created_at' => Carbon::now(),
+                'updated_by' => 1,
+                'updated_at' => Carbon::now()
+            ),
+            array(
+                'film_id' => 1,
+                'genre_id' => 4,
                 'created_by' => '1',
                 'created_at' => Carbon::now(),
                 'updated_by' => 1,
                 'updated_at' => Carbon::now()
             )
         );
-        DB::table('films')->insert($film);
+        DB::table('film_genre')->insert($film_genre);
     }
 }

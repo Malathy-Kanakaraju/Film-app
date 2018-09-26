@@ -20,7 +20,7 @@ class CreateCommentsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('film_id')->unsigned();
-            $table->foreign('film_id')->references('id')->on('users');
+            $table->foreign('film_id')->references('id')->on('films');
             $table->integer('created_by')->unsigned();
             $table->foreign('created_by')->references('id')->on('users');
             $table->integer('updated_by')->unsigned();
