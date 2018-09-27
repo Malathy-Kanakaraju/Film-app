@@ -54,10 +54,14 @@
 </style>
 @endsection
 @section('content')
-<div class="jumbotron">
-    <h3>Welcome to list of films</h3>
-    <div class="col-lg-6 col-lg-offset-3">
-        film1<br>film2<br>
+    <div class="col-lg-6 col-lg-offset-3 bg-primary">
+<div class="col-lg-8 col-lg-offset-2">
+    <h3 style="text-align: center">Welcome to list of films</h3>
+    <ul>
+        @foreach($films as $film)
+        <li>{{$film->name}}</li>
+        @endforeach
+    </ul>
     </div>
 </div>
 <!--<div class="flex-center position-ref full-height">
