@@ -22,6 +22,7 @@ class CreateFilmsTable extends Migration
             $table->float('ticket_price', 4, 2);
             $table->string('country', 100);
             $table->string('photo');
+            $table->string('slug');
             $table->integer('created_by')->unsigned();
             $table->foreign('created_by')->references('id')->on('users');
             $table->integer('updated_by')->unsigned();
