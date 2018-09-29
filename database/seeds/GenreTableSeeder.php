@@ -39,7 +39,7 @@ class GenreTableSeeder extends Seeder
             ),
             array(
                 'name' => 'Romance',
-                'description' => 'Comedy',
+                'description' => 'Romance',
                 'created_by' => '1',
                 'created_at' => Carbon::now(),
                 'updated_by' => 1,

@@ -46,7 +46,7 @@ class FilmGenreTableSeeder extends Seeder
                 'updated_at' => Carbon::now()
             ),
             array(
-                'film_id' => 1,
+                'film_id' => 3,
                 'genre_id' => 4,
                 'created_by' => '1',
                 'created_at' => Carbon::now(),

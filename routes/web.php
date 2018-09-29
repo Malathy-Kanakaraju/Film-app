@@ -17,9 +17,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+    return redirect('/films');
+});
 
 Route::get('/films', 'FilmController@showAllFilms');
 
 Route::get('/getFilm/{film_slug}', 'FilmController@getFilm');
+
+Route::post('/add-comment', ['middleware' => 'auth', 'uses' => 'FilmController@addComment']);
+
+Route::get('/films/create', ['middleware' => 'auth', 'uses' => 'FilmController@showCreateForm']);
+
+Route::post('/create-film', ['middleware' => 'auth', 'uses' => 'FilmController@createFilm']);
 
